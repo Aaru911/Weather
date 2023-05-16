@@ -20,11 +20,9 @@ async function success(position) {
     type.innerHTML=result.current.condition.text;
 
 }
-
 function fail(position) {
     console.log("Error:",position);
 }
-
 async function get_data(lat,long){
     const promis=await fetch(
         `https://api.weatherapi.com/v1/forecast.json?key=5aace33d334f4d609e650639231605&q=${lat},${long}&aqi=yes`
